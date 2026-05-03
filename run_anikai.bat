@@ -1,0 +1,16 @@
+@echo off
+echo Checking and Installing Dependencies...
+pip install -r requirements.txt
+echo.
+echo Starting Anikai Backend (Port 5000)...
+start python anikai_scraper.py
+echo Starting Anikai Frontend (Port 3000)...
+cd frontend
+start python -m http.server 3000
+cd ..
+echo Waiting for services to initialize...
+timeout /t 5
+echo Opening Frontend on http://localhost:3000...
+start http://localhost:3000
+echo Everything is ready! Enjoy your anime.
+pause

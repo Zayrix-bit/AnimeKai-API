@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anikai - Stream Your Favorite Anime</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <meta name="referrer" content="no-referrer">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-play-circle"></i>
+                <span>ANIKAI</span>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search anime...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Home Section -->
+            <section id="home-section" class="active">
+                <div id="hero-slider" class="hero-slider">
+                    <!-- Hero content injected by JS -->
+                </div>
+                
+                <div class="section-container">
+                    <h2 class="section-title">Latest Updates</h2>
+                    <div id="latest-updates" class="anime-grid">
+                        <!-- Cards injected by JS -->
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <h2 class="section-title">Trending Now</h2>
+                    <div id="trending-grid" class="anime-grid">
+                        <!-- Cards injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Search Results -->
+            <section id="search-section" class="hidden">
+                <div class="section-container">
+                    <h2 class="section-title" id="search-title">Search Results</h2>
+                    <div id="search-results" class="anime-grid">
+                        <!-- Cards injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Anime Detail View -->
+            <section id="detail-section" class="hidden">
+                <div class="detail-hero" id="detail-hero">
+                    <div class="detail-overlay"></div>
+                    <div class="detail-content">
+                        <div class="detail-poster">
+                            <img id="anime-poster" src="" alt="Poster">
+                        </div>
+                        <div class="detail-info">
+                            <h1 id="anime-title"></h1>
+                            <p id="anime-desc" class="anime-desc"></p>
+                            <div class="anime-meta" id="anime-meta"></div>
+                            <div class="detail-actions">
+                                <button id="start-watching-btn" class="primary-btn">
+                                    <i class="fas fa-play"></i> Watch Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="episode-section container">
+                    <div class="episode-header">
+                        <h2>Episodes</h2>
+                        <div class="episode-stats" id="episode-count"></div>
+                    </div>
+                    <div id="episode-grid" class="episode-grid">
+                        <!-- Episodes injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Player View -->
+            <section id="player-section" class="hidden">
+                <div class="player-container">
+                    <div id="artplayer"></div>
+                </div>
+                <div class="player-info container">
+                    <div class="player-title-row">
+                        <div class="playing-details">
+                            <h2 id="playing-title"></h2>
+                            <p id="playing-episode"></p>
+                        </div>
+                        <div class="language-toggle" id="lang-toggle">
+                            <button id="sub-btn" class="lang-btn active">SUB</button>
+                            <button id="dub-btn" class="lang-btn">DUB</button>
+                        </div>
+                    </div>
+                    <div class="server-container">
+                        <h3>Servers</h3>
+                        <div id="server-list" class="server-list">
+                            <!-- Servers injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Loading Overlay -->
+        <div id="loading" class="loading-overlay hidden">
+            <div class="loader"></div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Anikai Premium. Built for Anime Lovers.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
