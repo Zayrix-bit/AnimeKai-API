@@ -149,7 +149,7 @@ print(data['results'][0]['title'])
 
 ### 2. Fetch Direct Stream Links
 ```bash
-curl http://localhost:5000/api/source/YOUR_LINK_ID
+curl http://localhost:5000/api/source/dIOz9qam5Q
 ```
 
 ---
