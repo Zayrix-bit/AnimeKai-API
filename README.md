@@ -30,15 +30,54 @@ A high-performance, **reverse-engineered** anime scraping engine and REST API fo
 
 ## 🚀 API Endpoints
 
-| Endpoint | Method | Description | Sample URL |
-| :--- | :---: | :--- | :--- |
-| `/` | `GET` | API health check and version info. | `http://localhost:5000/` |
-| `/api/home` | `GET` | Banners, Trending, and Latest Updates. | `http://localhost:5000/api/home` |
-| `/api/search` | `GET` | Global search for anime. | `http://localhost:5000/api/search?keyword=naruto` |
-| `/api/anime/<slug>` | `GET` | Detailed metadata and Anime ID. | `http://localhost:5000/api/anime/naruto-shippuden-1` |
-| `/api/episodes/<id>`| `GET` | Full episode list with secure tokens. | `http://localhost:5000/api/episodes/12345` |
-| `/api/servers/<token>`| `GET` | Available stream links and languages. | `http://localhost:5000/api/servers/ep_token_xyz` |
-| `/api/source/<id>` | `GET` | **Resolver:** Direct M3U8 & skip-times. | `http://localhost:5000/api/source/link_id_abc` |
+### 🏠 API Root
+> **GET** `/`  
+> Health check and version metadata.
+```http
+http://localhost:5000/
+```
+
+### 📺 Home Dashboard
+> **GET** `/api/home`  
+> Returns banners, trending anime (Day/Week/Month), and latest updates.
+```http
+http://localhost:5000/api/home
+```
+
+### 🔍 Global Search
+> **GET** `/api/search?keyword={query}`  
+> Search for any anime with detailed stats.
+```http
+http://localhost:5000/api/search?keyword=naruto
+```
+
+### ℹ️ Anime Info
+> **GET** `/api/anime/{slug}`  
+> Detailed metadata, seasons, and internal Anime ID.
+```http
+http://localhost:5000/api/anime/naruto-shippuden-1
+```
+
+### 📜 Episode List
+> **GET** `/api/episodes/{ani_id}`  
+> Full list of episodes with secure tokens and language support flags.
+```http
+http://localhost:5000/api/episodes/12345
+```
+
+### 🖥️ Server List
+> **GET** `/api/servers/{ep_token}`  
+> Lists available stream links and server identifiers.
+```http
+http://localhost:5000/api/servers/ep_token_xyz
+```
+
+### ⚡ Direct Resolver
+> **GET** `/api/source/{link_id}`  
+> **The Core Resolver:** Decrypts and returns direct M3U8 links & skip-times.
+```http
+http://localhost:5000/api/source/link_id_abc
+```
 
 ---
 
