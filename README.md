@@ -1,4 +1,4 @@
-# 🎬 AnimeKAI Ultimate - Premium Streaming Platform
+# 🎬 AnimeKAI Ultimate API - With M3U8 Streaming
 
 <p align="center">
   <img src="https://camo.githubusercontent.com/bebb63326fe03a40c1b7ca94e4421465baaf1f22b1147389fa25a91d6dfc64b0/68747470733a2f2f616e696b61692e746f2f6173736574732f75706c6f6164732f333735383561336666613865633239326565396532323535663366363362343863656361313765663261303338362e706e67" width="500" alt="AnimeKAI Logo">
