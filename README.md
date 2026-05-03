@@ -1,8 +1,10 @@
 # 🎬 AnimeKAI Ultimate - Premium Streaming Platform
 
-A high-performance, reverse-engineered anime streaming platform powered by Python (Flask) and a modern, glassmorphic Frontend. This project scrapes **Anikai.to** and provides a seamless, ad-free viewing experience with advanced caching and auto-resolution.
+<p align="center">
+  <img src="https://camo.githubusercontent.com/bebb63326fe03a40c1b7ca94e4421465baaf1f22b1147389fa25a91d6dfc64b0/68747470733a2f2f616e696b61692e746f2f6173736574732f75706c6f6164732f333735383561336666613865633239326565396532323535663366363362343863656361313765663261303338362e706e67" width="500" alt="AnimeKAI Logo">
+</p>
 
-![Anikai Banner](https://via.placeholder.com/1200x400?text=AnimeKAI+Ultimate+Streaming+Experience)
+A high-performance, reverse-engineered anime streaming platform powered by Python (Flask) and a modern, glassmorphic Frontend.
 
 ## ✨ Key Features
 
