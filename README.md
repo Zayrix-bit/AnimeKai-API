@@ -62,21 +62,21 @@ http://localhost:5000/api/anime/naruto-shippuden-1
 > **GET** `/api/episodes/{ani_id}`  
 > Full list of episodes with secure tokens and language support flags.
 ```http
-http://localhost:5000/api/episodes/12345
+http://localhost:5000/api/episodes/c4S88Q
 ```
 
 ### 🖥️ Server List
 > **GET** `/api/servers/{ep_token}`  
 > Lists available stream links and server identifiers.
 ```http
-http://localhost:5000/api/servers/ep_token_xyz
+http://localhost:5000/api/servers/e9298OH2tROylH1c0ceX
 ```
 
 ### ⚡ Direct Resolver
 > **GET** `/api/source/{link_id}`  
 > **The Core Resolver:** Decrypts and returns direct M3U8 links & skip-times.
 ```http
-http://localhost:5000/api/source/link_id_abc
+http://localhost:5000/api/source/dIOz9qam5Q
 ```
 
 ---
