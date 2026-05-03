@@ -30,15 +30,33 @@ A high-performance, **reverse-engineered** anime scraping engine and REST API fo
 
 ## 🚀 API Endpoints
 
-| Endpoint | Method | Description |
-| :--- | :---: | :--- |
-| `/api/home` | `GET` | Fetches Banners, Trending (Day/Week/Month), and Latest Updates. |
-| `/api/search?keyword=...` | `GET` | Global search for anime with detailed metadata. |
-| `/api/anime/<slug>` | `GET` | Fetches detailed info, seasons, and Anime ID for a specific slug. |
-| `/api/episodes/<ani_id>` | `GET` | Retrieves the full episode list with secure tokens. |
-| `/api/servers/<ep_token>` | `GET` | Lists available streaming servers for a specific episode. |
-| `/api/source/<link_id>` | `GET` | **The Resolver:** Decrypts and returns direct M3U8 sources and skip-times. |
-| `/api/most-searched` | `GET` | Popular search terms from the platform. |
+| Endpoint | Method | Description | Sample URL |
+| :--- | :---: | :--- | :--- |
+| `/` | `GET` | API health check and version info. | `http://localhost:5000/` |
+| `/api/home` | `GET` | Banners, Trending, and Latest Updates. | `http://localhost:5000/api/home` |
+| `/api/search` | `GET` | Global search for anime. | `http://localhost:5000/api/search?keyword=naruto` |
+| `/api/anime/<slug>` | `GET` | Detailed metadata and Anime ID. | `http://localhost:5000/api/anime/naruto-shippuden-1` |
+| `/api/episodes/<id>`| `GET` | Full episode list with secure tokens. | `http://localhost:5000/api/episodes/12345` |
+| `/api/servers/<token>`| `GET` | Available stream links and languages. | `http://localhost:5000/api/servers/ep_token_xyz` |
+| `/api/source/<id>` | `GET` | **Resolver:** Direct M3U8 & skip-times. | `http://localhost:5000/api/source/link_id_abc` |
+
+---
+
+## 🛠️ Usage Examples
+
+### 1. Search for Anime
+```python
+import requests
+
+response = requests.get("http://localhost:5000/api/search?keyword=One Piece")
+data = response.json()
+print(data['results'][0]['title'])
+```
+
+### 2. Fetch Direct Stream Links
+```bash
+curl http://localhost:5000/api/source/YOUR_LINK_ID
+```
 
 ---
 
