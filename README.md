@@ -42,6 +42,61 @@ A high-performance, **reverse-engineered** anime scraping engine and REST API fo
 
 ---
 
+## 📊 Live API Data Preview
+
+### 1. Dashboard (`/api/home`)
+**Real-time response example:**
+```json
+{
+    "Author": "Zayrix-bit",
+    "banner": [
+        {
+            "title": "Daemons of the Shadow Realm",
+            "japanese_title": "Yomi no Tsugai",
+            "type": "TV",
+            "sub_episodes": "5",
+            "dub_episodes": "4",
+            "quality": "HD",
+            "release": "2026"
+        },
+        {
+            "title": "One Piece",
+            "japanese_title": "ONE PIECE",
+            "sub_episodes": "1159",
+            "dub_episodes": "1155"
+        }
+    ],
+    "success": true
+}
+```
+
+### 2. Search Results (`/api/search?keyword=Naruto`)
+**Real-time response example:**
+```json
+{
+    "Author": "Zayrix-bit",
+    "keyword": "Naruto",
+    "results": [
+        {
+            "title": "Naruto",
+            "japanese_title": "NARUTO",
+            "slug": "naruto-9r5k",
+            "year": "2002",
+            "total_episodes": "220"
+        },
+        {
+            "title": "Naruto Shippuden",
+            "japanese_title": "NARUTO: Shippuuden",
+            "slug": "naruto-shippuuden-mv9v",
+            "year": "2007"
+        }
+    ],
+    "success": true
+}
+```
+
+---
+
 ## 🛠️ Usage Examples
 
 ### 1. Search for Anime
