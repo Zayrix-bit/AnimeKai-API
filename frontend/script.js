@@ -22,7 +22,7 @@ const showSection = (name) => {
     
     // Stop video if leaving player
     if (name !== 'player') {
-        const playerContainer = document.getElementById('artplayer');
+        const playerContainer = document.getElementById('video-player');
         if (playerContainer) playerContainer.innerHTML = '';
     }
 
@@ -243,7 +243,7 @@ const renderServers = () => {
     if (servers.length > 0) {
         loadSource(servers[0].link_id);
     } else {
-        document.getElementById('artplayer').innerHTML = '<div style="display:flex; align-items:center; justify-content:center; height:100%; color:var(--text-dim);">No servers found for this language.</div>';
+        document.getElementById('video-player').innerHTML = '<div style="display:flex; align-items:center; justify-content:center; height:100%; color:var(--text-dim);">No servers found for this language.</div>';
     }
 };
 
@@ -276,7 +276,7 @@ const loadSource = async (linkId) => {
     const embedUrl = data.embed_url;
     console.log('Loading Embed Player:', embedUrl);
 
-    const playerContainer = document.getElementById('artplayer');
+    const playerContainer = document.getElementById('video-player');
     
     // Add loader
     playerContainer.innerHTML = `
