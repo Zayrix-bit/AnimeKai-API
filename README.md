@@ -157,10 +157,10 @@ curl http://localhost:5000/api/source/dIOz9qam5Q
 ## 📦 Installation & Setup
 
 ### Windows (Quick Start)
-Just double-click on `run_anikai.bat`. This script will:
-1. Create a virtual environment (if needed).
-2. Install all dependencies from `requirements.txt`.
-3. Start the Flask API and the local frontend server.
+1. **1-Click Startup:** Just double-click on **`run_anikai.bat`**. This script will install dependencies and start both the API and Frontend.
+2. **Manual Startup (Terminal):** If you prefer running manually, open two terminals:
+   - **Terminal 1 (Backend):** `python anikai_scraper.py` (Runs on Port 5000)
+   - **Terminal 2 (Frontend):** `cd frontend` then `python -m http.server 3000` (Runs on Port 3000)
 
 ### Linux / Mac (Manual)
 1. **Clone & Navigate:**
